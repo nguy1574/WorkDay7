@@ -8,12 +8,19 @@ Public Class Form1
         st = InputBox("Please type the initial string")
 
         ' Compute the result
+        Dim i As Integer
         Dim result As String = ""
+        For i = 0 To st.Length - 1 Step 1
+            Dim c As Char
+            c = st.Chars(i)
+            result = c & result
+
+        Next
 
 
 
         ' Report the output to the user
-        MessageBox.Show("Not implemented yet", "Result")
+        MessageBox.Show(result, "Result")
 
     End Sub
 End Class
